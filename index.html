@@ -20,7 +20,9 @@ form {
 </style>
 </head>
 <body>
-  <form action="#" class="form-horizontal ws-validate">
+    <h1>ixigo's postback link generator</h1>
+     <h4>Mandatory parameters</h4>
+  <form action="#" class="form-horizontal ws-validate" id="generateForm">
       <div class="form-group">
           <label for="advertiser_id" class="control-label">Advertiser Id*</label>
           <input type="text" class="form-control" id="advertiser_id" required />
@@ -47,7 +49,7 @@ form {
             <option>EVENT</option>
           </select>
       </div>
-      <h4>Optional paameters</h4>
+      <h4>Optional parameters</h4>
         <div class="form-group">
           <label for="placement_id" class="control-label">Placement Id</label>
           <input type="text" class="form-control" id="placement_id" />
@@ -66,7 +68,13 @@ form {
       </div>
       
       <div class="form-group">
-          <button type="submit" class="btn btn-primary">Generate Postback Link</button>
+          <button type="submit" class="btn btn-primary" onclick="generate()">Generate Postback Link</button>
+      </div>
+      
+      <div>
+          <p>Generated link:</p>
+          <div id="generated"></div>
+          
       </div>
   </form>
   <script>
@@ -104,6 +112,11 @@ form {
         //load forms polyfill + iVal feature
         webshim.polyfill('forms');
       })();
+      
+      function generate(){
+        $('#generated').html = $('#type');
+        alert(1);
+      }
       
       //]]>
   </script>
