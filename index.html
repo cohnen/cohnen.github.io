@@ -22,24 +22,68 @@ form {
 <body>
   <form action="#" class="form-horizontal ws-validate">
       <div class="form-group">
-          <label for="inputEmail3" class="control-label">Email*</label>
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required />
+          <label for="advertiser_id" class="control-label">Advertiser Id*</label>
+          <input type="text" class="form-control" id="advertiser_id" required />
       </div>
       <div class="form-group">
-          <label for="inputPassword3" class="control-label">Password*</label>
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required />
+          <label for="campaign_id" class="control-label">Campaign Id*</label>
+          <input type="text" class="form-control" id="campaign_id" required />
       </div>
-      <div class="form-group">
-          <div class="checkbox">
-              <label>
-                  <input type="checkbox" required="" />Remember me</label>
-          </div>
+      
+         <div class="form-group">
+          <label for="app_id" class="control-label">App id (com.ixigo.com/com.cleartrip.android,...)*</label>
+          <input type="text" class="form-control" id="app_id" required />
       </div>
+        <div class="form-group">
+          <label for="ad_device_id" class="control-label">Google Advertiser Id (MACRO)*</label>
+          <input type="text" class="form-control" id="ad_device_id" required />
+      </div>
+        <div class="form-group">
+          <label for="type" class="control-label">Type*</label>
+         <select class="form-control" id="type" required>
+            <option>CLICK</option>
+            <option>INSTALL</option>
+            <option>SALE</option>
+            <option>EVENT</option>
+          </select>
+      </div>
+      <h4>Optional paameters</h4>
+        <div class="form-group">
+          <label for="placement_id" class="control-label">Placement Id</label>
+          <input type="text" class="form-control" id="placement_id" />
+      </div>
+        <div class="form-group">
+          <label for="sale_amount" class="control-label">Sale Amount</label>
+          <input type="text" class="form-control" id="sale_amount" required />
+      </div>
+       <div class="form-group">
+          <label for="sale_currency_code" class="control-label">Sale Currency Code</label>
+          <input type="text" class="form-control" id="sale_currency_code" value="INR" />
+      </div>
+       <div class="form-group">
+          <label for="extra" class="control-label">Extra</label>
+          <input type="text" class="form-control" id="extra" required />
+      </div>
+      
       <div class="form-group">
-          <button type="submit" class="btn btn-primary">submit</button>
+          <button type="submit" class="btn btn-primary">Generate Postback Link</button>
       </div>
   </form>
   <script>
+  //<![CDATA[
+  /* Required Params
+  advertiser_id 
+  campaign_id
+  app_id  
+  ad_device_id
+  type (CLICK,INSTALL,SALE,EVENT)
+
+  Optional Params
+  placement_id
+  sale_amount
+  sale_currency_code
+  extra (for any other information)
+  */
       (function () {
         webshim.setOptions('forms', {
             lazyCustomMessages: true,
@@ -60,5 +104,7 @@ form {
         //load forms polyfill + iVal feature
         webshim.polyfill('forms');
       })();
+      
+      //]]>
   </script>
 </body>
