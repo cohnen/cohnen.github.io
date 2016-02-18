@@ -20,8 +20,10 @@ form {
 </style>
 </head>
 <body>
-     <h1>ixigo's postback link generator</h1>
+     <h2>ixigo's postback link generator</h1>
      <h4>Mandatory parameters</h4>
+     </div>
+     <div class="form-group">
   <form action="#" class="form-horizontal ws-validate" id="generateForm">
       <div class="form-group">
           <label for="advertiser_id" class="control-label">Advertiser Id*</label>
@@ -68,7 +70,7 @@ form {
       </div>
       
       <div class="form-group">
-          <button type="submit" class="btn btn-primary" onclick="generate()">Generate Postback Link</button>
+          <button type="submit" class="btn btn-primary" onclick="event.preventDefault();generate();">Generate Postback Link</button>
       </div>
       
       <div>
