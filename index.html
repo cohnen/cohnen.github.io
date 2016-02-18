@@ -129,16 +129,16 @@ form {
     event.preventDefault(); 
     var variable = '';
     if ($('#placement_id').val()!=''){
-        +'&placement_id='+$('#placement_id').val();
+        variable+='&placement_id='+$('#placement_id').val();
     }
     if ($('#sale_amount').val()!=''){
-        +'&sale_amount='+$('#sale_amount').val();
+        variable+=+'&sale_amount='+$('#sale_amount').val();
     }
     if ($('#sale_currency_code').val()!=''){
-        +'&sale_currency_code='+$('#sale_currency_code').val();
+        variable+=+'&sale_currency_code='+$('#sale_currency_code').val();
     }
     if ($('#extra').val()!=''){
-        +'&extra='+$('#extra').val();
+        variable+=+'&extra='+$('#extra').val();
     }
     if (variable != ''){
         variable = '&'+variable;
