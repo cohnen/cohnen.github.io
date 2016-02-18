@@ -138,7 +138,7 @@ form {
         +'&sale_currency_code='+$('#sale_currency_code').val();
     }
     if ($('#extra').val()!=''){
-        +'&extra='+$('#extra').val()+'');
+        +'&extra='+$('#extra').val();
     }
     $('#generated').html('https://www.ixigo.com/ixi-api/marketing/postback?advertiser_id='+$('#advertiser_id').val()+'&campaign_id='+$('#campaign_id').val()+'&app_id='+$('#app_id').val()+'&ad_device_id='+$('#ad_device_id').val()+'&type='+$('#type').val()+variable!=''?'&'+variable:'';
      
