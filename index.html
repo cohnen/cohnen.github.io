@@ -78,7 +78,7 @@ form {
       </div>
       
       <div class="form-group">
-          <button type="submit" class="btn btn-primary" onclick="generate();return false;">Generate Postback Link</button>
+          <button type="submit" class="btn btn-primary">Generate Postback Link</button>
       </div>
       
       <div>
@@ -123,9 +123,14 @@ form {
         webshim.polyfill('forms');
       })();
       
-      function generate(){
-        $('#generated').html = 'https://api.ixigo.com/ixi-api/marketing/postback?advertiser_id='+$('#advertiser_id').val()+'&campaign_id='+$('#campaign_id').val()+'&app_id='+$('#app_id').val()+'&ad_device_id='+$('#ad_device_id').val()+'&type='+$('#type').val()+'&placement_id='+$('#placement_id').val()+'&sale_amount='+$('#sale_amount').val()+'&sale_currency_code='+$('#sale_currency_code').val()+'&extra='+$('#extra').val()+'';
-      }
+     
+      
+      $('#generateForm').on('submit', function(event){
+    event.preventDefault(); 
+    $('#generated').html = 'https://api.ixigo.com/ixi-api/marketing/postback?advertiser_id='+$('#advertiser_id').val()+'&campaign_id='+$('#campaign_id').val()+'&app_id='+$('#app_id').val()+'&ad_device_id='+$('#ad_device_id').val()+'&type='+$('#type').val()+'&placement_id='+$('#placement_id').val()+'&sale_amount='+$('#sale_amount').val()+'&sale_currency_code='+$('#sale_currency_code').val()+'&extra='+$('#extra').val()+'';
+     
+    //return false; 
+});
       
       //]]>
   </script>
