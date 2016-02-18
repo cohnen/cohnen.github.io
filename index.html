@@ -127,7 +127,7 @@ form {
       
       $('#generateForm').on('submit', function(event){
     event.preventDefault(); 
-    $('#generated').html = 'https://api.ixigo.com/ixi-api/marketing/postback?advertiser_id='+$('#advertiser_id').val()+'&campaign_id='+$('#campaign_id').val()+'&app_id='+$('#app_id').val()+'&ad_device_id='+$('#ad_device_id').val()+'&type='+$('#type').val()+'&placement_id='+$('#placement_id').val()+'&sale_amount='+$('#sale_amount').val()+'&sale_currency_code='+$('#sale_currency_code').val()+'&extra='+$('#extra').val()+'';
+    $('#generated').html('https://api.ixigo.com/ixi-api/marketing/postback?advertiser_id='+$('#advertiser_id').val()+'&campaign_id='+$('#campaign_id').val()+'&app_id='+$('#app_id').val()+'&ad_device_id='+$('#ad_device_id').val()+'&type='+$('#type').val()+'&placement_id='+$('#placement_id').val()+'&sale_amount='+$('#sale_amount').val()+'&sale_currency_code='+$('#sale_currency_code').val()+'&extra='+$('#extra').val()+'');
      
     //return false; 
 });
