@@ -1,6 +1,8 @@
 <html>
 <head>
 <script src="https://afarkas.github.io/webshim/js-webshim/minified/polyfiller.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css" type="text/css">
 <style>
@@ -20,12 +22,14 @@ form {
 </style>
 </head>
 <body>
-    <div class="form-group">
-     <h2>ixigo's postback link generator</h1>
+   
+     
+  <form action="#" class="form-horizontal ws-validate" id="generateForm">
+       <div class="form-group">
+     <h2>ixigo's postback link generator</h2>
      <h4>Mandatory parameters</h4>
      </div>
      
-  <form action="#" class="form-horizontal ws-validate" id="generateForm">
       <div class="form-group">
           <label for="advertiser_id" class="control-label">Advertiser Id*</label>
           <input type="text" class="form-control" id="advertiser_id" required />
@@ -52,7 +56,10 @@ form {
             <option>EVENT</option>
           </select>
       </div>
-      <h4>Optional parameters</h4>
+      <div class="form-group">
+    <h4>Optional parameters</h4>
+     </div>
+      
         <div class="form-group">
           <label for="placement_id" class="control-label">Placement Id</label>
           <input type="text" class="form-control" id="placement_id" />
