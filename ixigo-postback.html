@@ -133,11 +133,11 @@ form {
         variable+='&placement_id='+encodeURIComponent($('#placement_id').val());
     }
     if ($('#sale_amount').val()!=''){
-        variable+=+'&sale_amount='+encodeURIComponent($('#sale_amount').val());
-        variable+=+'&sale_currency_code='+encodeURIComponent($('#sale_currency_code').val());
+        variable+='&sale_amount='+encodeURIComponent($('#sale_amount').val());
+        variable+='&sale_currency_code='+encodeURIComponent($('#sale_currency_code').val());
     }
     if ($('#extra').val()!=''){
-        variable+=+'&extra='+encodeURIComponent($('#extra').val());
+        variable+='&extra='+encodeURIComponent($('#extra').val());
     }
     
     var link = 'https://www.ixigo.com/ixi-api/marketing/postback?advertiser_id='+encodeURIComponent($('#advertiser_id').val())+'&campaign_id='+encodeURIComponent($('#campaign_id').val())+'&app_id='+encodeURIComponent($('#app_id').val())+'&ad_device_id='+encodeURIComponent($('#ad_device_id').val())+'&type='+encodeURIComponent($('#type').val())+variable;
