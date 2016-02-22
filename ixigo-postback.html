@@ -140,7 +140,8 @@ form {
         variable+=+'&extra='+encodeURIComponent($('#extra').val());
     }
     
-    $('#generated').html('https://www.ixigo.com/ixi-api/marketing/postback?advertiser_id='+encodeURIComponent($('#advertiser_id').val())+'&campaign_id='+encodeURIComponent($('#campaign_id').val())+'&app_id='+encodeURIComponent($('#app_id').val())+'&ad_device_id='+encodeURIComponent($('#ad_device_id').val())+'&type='+encodeURIComponent($('#type').val())+variable);
+    var link = 'https://www.ixigo.com/ixi-api/marketing/postback?advertiser_id='+encodeURIComponent($('#advertiser_id').val())+'&campaign_id='+encodeURIComponent($('#campaign_id').val())+'&app_id='+encodeURIComponent($('#app_id').val())+'&ad_device_id='+encodeURIComponent($('#ad_device_id').val())+'&type='+encodeURIComponent($('#type').val())+variable;
+    $('#generated').html('<p>'+link+'</p><br /><br /><a href="'+link+'">Test postback</a>');
      
     //return false; 
 });
