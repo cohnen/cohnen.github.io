@@ -9,7 +9,7 @@
 <style>
 
 body {
-    margin: 10px;
+    margin: 10px;va
     padding: 10px;
 }
 form {
@@ -139,9 +139,7 @@ form {
     if ($('#extra').val()!=''){
         variable+=+'&extra='+encodeURIComponent($('#extra').val());
     }
-    if (variable != ''){
-        variable = '&'+variable;
-    }
+    
     $('#generated').html('https://www.ixigo.com/ixi-api/marketing/postback?advertiser_id='+encodeURIComponent($('#advertiser_id').val())+'&campaign_id='+encodeURIComponent($('#campaign_id').val())+'&app_id='+encodeURIComponent($('#app_id').val())+'&ad_device_id='+encodeURIComponent($('#ad_device_id').val())+'&type='+encodeURIComponent($('#type').val())+variable);
      
     //return false; 
