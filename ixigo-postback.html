@@ -47,7 +47,9 @@ form {
         <div class="form-group">
           <label for="ad_device_id" class="control-label">Google Advertiser Id - {BANDI} for apsalar {advertiserId} for appsflyer *</label>
           <input type="text" class="form-control" id="ad_device_id" required value="[MACRO]" />
-          <p style="margin-top:5px;font-size:small">Check other macros <a href="https://support.appsflyer.com/hc/en-us/articles/207273946-Available-Macros-on-AppsFlyer-s-Postbacks">appsflyer</a> or <a href="http://support.apsalar.com/customer/portal/articles/1305106-analytics-attribution-and-integration-glossary#postbacks">appsalar</a></p>
+          <p style="margin-top:5px;font-size:small">Check other macros <a href="https://support.appsflyer.com/hc/en-us/articles/207273946-Available-Macros-on-AppsFlyer-s-Postbacks">appsflyer</a> 
+          , <a href="http://support.apsalar.com/customer/portal/articles/1305106-analytics-attribution-and-integration-glossary#postbacks">appsalar</a> 
+          or <a href="https://help.tune.com/marketing-console/macros-in-postback-urls/#conversion">tune</a>  </p>
       </div>
         <div class="form-group">
           <label for="type" class="control-label">Type*</label>
@@ -134,11 +136,11 @@ form {
         variable+='&placement_id='+encodeURIComponent($('#placement_id').val());
     }
     if ($('#sale_amount').val()!=''){
-        variable+='&sale_amount='+encodeURIComponent($('#sale_amount').val());
-        variable+='&sale_currency_code='+encodeURIComponent($('#sale_currency_code').val());
+        variable+='&sale_amount='+$('#sale_amount').val();
+        variable+='&sale_currency_code='+$('#sale_currency_code').val();
     }
     if ($('#extra').val()!=''){
-        variable+='&extra='+encodeURIComponent($('#extra').val());
+        variable+='&extra='+$('#extra').val();
     }
     
     var link = 'https://www.ixigo.com/ixi-api/marketing/postback?advertiser_id='+encodeURIComponent($('#advertiser_id').val())+'&campaign_id='+encodeURIComponent($('#campaign_id').val())+'&app_id='+encodeURIComponent($('#app_id').val())+'&ad_device_id='+$('#ad_device_id').val()+'&type='+encodeURIComponent($('#type').val())+variable;
